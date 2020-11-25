@@ -1,0 +1,57 @@
+﻿  main.cpp
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(10,13): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(10,13): error C2143: синтаксическая ошибка: отсутствие ";" перед "&"
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(10,39): error C2238: непредвиденные лексемы перед ";"
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(18,7): error C2143: синтаксическая ошибка: отсутствие ";" перед "*"
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(18,7): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(18,16): error C2238: непредвиденные лексемы перед ";"
+  Maze.cpp
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(10,13): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(10,13): error C2143: синтаксическая ошибка: отсутствие ";" перед "&"
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(10,39): error C2238: непредвиденные лексемы перед ";"
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(18,7): error C2143: синтаксическая ошибка: отсутствие ";" перед "*"
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(18,7): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(18,16): error C2238: непредвиденные лексемы перед ";"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(7,1): error C2789: "Maze::MCell": требуется инициализация объекта типа класса, квалифицированного как const
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(10): message : см. объявление "Maze::MCell"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(8,8): error C2039: "m_field": не является членом "Maze".
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(5): message : см. объявление "Maze"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(8,27): error C2061: синтаксическая ошибка: идентификатор "MCell"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(15,15): error C2039: "m_field": не является членом "Maze".
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(5): message : см. объявление "Maze"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(19,20): error C2039: "cell": не является членом "Maze".
+C:\Users\peter\source\repos\Maze\Maze\Maze.h(5): message : см. объявление "Maze"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(20,1): error C2270: cell: модификаторы недопустимы для функций, не являющихся членами
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(21,34): error C2248: MCell::MCell: невозможно обратиться к private член, объявленному в классе "MCell"
+C:\Users\peter\source\repos\Maze\Maze\MCell.h(13): message : см. объявление "MCell::MCell"
+C:\Users\peter\source\repos\Maze\Maze\MCell.h(6): message : см. объявление "MCell"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(22,9): error C2355: "this": может указываться только в нестатических членах-функциях или инициализаторах нестатических членов данных
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(22,27): error C2355: "this": может указываться только в нестатических членах-функциях или инициализаторах нестатических членов данных
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(43,8): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "c"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(43,8): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(49,4): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(50,8): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(51,3): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(56,4): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(57,8): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(58,3): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(65,8): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "c"
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(65,8): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(71,4): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(72,8): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(73,3): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(78,4): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(79,8): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(80,3): error C2065: c: необъявленный идентификатор
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(97,32): warning C4566: символ, представленный универсальным именем символа "\u2514", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(98,31): warning C4566: символ, представленный универсальным именем символа "\u2502", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(99,31): warning C4566: символ, представленный универсальным именем символа "\u2518", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(100,34): warning C4566: символ, представленный универсальным именем символа "\u250C", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(101,34): warning C4566: символ, представленный универсальным именем символа "\u2500", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(102,33): warning C4566: символ, представленный универсальным именем символа "\u2510", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(103,41): warning C4566: символ, представленный универсальным именем символа "\u251C", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(104,41): warning C4566: символ, представленный универсальным именем символа "\u2534", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(105,40): warning C4566: символ, представленный универсальным именем символа "\u2524", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(106,43): warning C4566: символ, представленный универсальным именем символа "\u252C", невозможно представить в текущей кодовой странице (1251)
+C:\Users\peter\source\repos\Maze\Maze\Maze.cpp(107,50): warning C4566: символ, представленный универсальным именем символа "\u253C", невозможно представить в текущей кодовой странице (1251)
+  Создание кода...
