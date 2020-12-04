@@ -3,38 +3,10 @@
 #include <iostream>
 
 
-Maze* goingDeep(MTreeNode* root, Maze* maze)
+int main()
 {
-	bool down = false;
-	bool right = false;
-	int i = root->i();
-	int j = root->j();
-	if (root->child(0) != nullptr) 
-	{ 
-		down = true;
-		maze = goingDeep((MTreeNode*)(root->child(0)), maze);
-	}
-	if (root->child(1) != nullptr)
-	{
-		right = true;
-		maze = goingDeep((MTreeNode*)(root->child(1)), maze);
-	}
-	if (down) bool c = maze->makeConnection(i, j, i + 1, j);
-	if (right) bool c = maze->makeConnection(i, j, i, j + 1);
-	return maze;
-}
-
-Maze* convert(MTreeNode* root, int size)
-{
-	MTreeNode* currentNode = root;
-	auto maze = new Maze(size, size);
-	maze = goingDeep(currentNode, maze);
-	return maze;
-}
-
-
-MTreeNode* makeTree(MTreeNode* root, int size)
-{
+	const int size = 5; //влияет на все, работает со всеми не слишком большими неотрцательными целыми числами, если поменять, дерево станет больше/меньше.
+	auto root = MTreeNode::beginTree(0, 0);
 	MTreeNode* rootCopy = root;
 	MTreeNode* rootCopyCopy = rootCopy;
 	bool c;
@@ -46,7 +18,7 @@ MTreeNode* makeTree(MTreeNode* root, int size)
 			rootCopy = rootCopy->hasChild(j, i);
 		}
 		rootCopy = rootCopyCopy;
-		if (i != size-1) // цепляемся за новую ноду, от которой будем дальше плясать
+		if (i != size - 1) // цепляемся за новую ноду, от которой будем дальше плясать
 		{
 			c = rootCopy->addChild(i, i + 1);
 			rootCopy = rootCopy->hasChild(i, i + 1);
@@ -60,11 +32,38 @@ MTreeNode* makeTree(MTreeNode* root, int size)
 		}
 		rootCopy = rootCopyCopy;
 	}
-	return root;
-}
-
-int** treeWalk(MTreeNode* root, int size)
-{
+	Maze* maze = new Maze(size, size);
+	rootCopy = root;
+	for (int i = 0; i < size; i++)
+	{
+		int j = rootCopy->j();
+		rootCopyCopy = rootCopy;
+		int k = i+1;
+		MTreeNode* child = rootCopyCopy->hasChild(k, j);
+		while (child != nullptr)
+		{
+			c = maze->makeConnection(k-1, j, k, j);
+			rootCopyCopy = child;
+			k++;
+			child = rootCopyCopy->hasChild(k, j);
+		}
+		k = i + 1;
+		rootCopyCopy = rootCopy;
+		child = rootCopyCopy->hasChild(i, k);
+		if (i < size-1)
+		{
+			rootCopy = child->hasChild(i + 1, i + 1);
+			c = maze->makeConnection(i, k, k, k);
+		}
+		while (child != nullptr)
+		{
+			c = maze->makeConnection(j, k - 1, j, k);
+			rootCopyCopy = child;
+			k++;
+			child = rootCopyCopy->hasChild(i, k);
+		}
+	}
+	maze->printMaze();
 	int** distances;
 	distances = new int* [size];
 	for (int i = 0; i < size; i++)
@@ -72,9 +71,8 @@ int** treeWalk(MTreeNode* root, int size)
 		distances[i] = new int[size];
 	}
 	distances[0][0] = 0;
-	MTreeNode* rootCopy = root;
-	MTreeNode* rootCopyCopy = rootCopy;
-	bool c;
+	rootCopy = root;
+	rootCopyCopy = rootCopy;
 	for (int i = 0; i < size; i++)
 	{
 		for (int j = i + 1; j < size; j++) // вниз
@@ -97,28 +95,12 @@ int** treeWalk(MTreeNode* root, int size)
 		}
 		rootCopy = rootCopyCopy;
 	}
-	return distances;
-}
-
-void print2DArray(int** arr, int size)
-{
 	for (int i = 0; i < size; i++)
 	{
 		for (int j = 0; j < size; j++)
 		{
-			std::cout << arr[i][j] << " ";
+			std::cout << distances[i][j] << " ";
 		}
 		std::cout << std::endl;
 	}
-}
-
-int main()
-{
-	const int size = 10; //влияет на все, работает со всеми не слишком большими неотрцательными целыми числами, если поменять, дерево станет больше/меньше.
-	auto root = MTreeNode::beginTree(0, 0);
-	root = makeTree(root, size);
-	Maze* maze = convert(root, size);
-	maze->printMaze();
-	int** distances = treeWalk(root, size);
-	print2DArray(distances, size);
 }
